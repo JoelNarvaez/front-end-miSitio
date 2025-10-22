@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home - MiSitio</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo">MiSitio</a>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+      </div>
+      <div class="nav-right">
+        <span id="userName" class="user-name"></span>
+        <button id="loginBtn" class="icon-btn" title="Login">
+          <span class="login-icon">🔒</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+      <section id="home">
+        <h1>Bienvenido a MiSitio</h1>
+        <p>
+          En <strong>MiSitio</strong> queremos ofrecerte la mejor experiencia web
+          posible. Desde noticias de tecnología hasta tutoriales prácticos, aquí
+          encontrarás todo lo que necesitas para aprender y explorar de manera
+          sencilla y divertida.
+        </p>
+
+        <p>
+          Nuestro objetivo es ayudarte a descubrir nuevas herramientas, tips y
+          recursos que faciliten tu vida digital. Nos enfocamos en crear contenido
+          claro, útil y siempre actualizado.
+        </p>
+
+        <p>
+          Explora nuestras secciones, mantente al día con las novedades y
+          participa en nuestra comunidad. En <strong>MiSitio</strong> cada
+          visitante es importante y queremos que tu experiencia sea memorable.
+        </p>
+      </section>
+    </main>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="formLogin">
+          <input type="text" id="login" placeholder="Usuario" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Desarrollado por <strong>Joel Narvaez Martínez</strong> 
+        <span id="fechaActual"></span>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+
+    <script>
+      const fecha = new Date();
+      const opciones = { year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("fechaActual").textContent =
+        fecha.toLocaleDateString("es-MX", opciones);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Us - MiSitio</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html" class="nav-logo">MiSitio</a>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+      </div>
+      <div class="nav-right">
+        <span id="userName" class="user-name"></span>
+        <button id="loginBtn" class="icon-btn" title="Login">
+          <span class="login-icon">🔒</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+      <section id="about">
+        <h1>Sobre Nosotros</h1>
+        <p>
+          En <strong>MiSitio</strong> nos apasiona la tecnología, el diseño y la
+          simplicidad. Creemos que una buena experiencia web no necesita ser
+          complicada para ser efectiva. Por eso trabajamos en desarrollar sitios
+          modernos, rápidos y accesibles para todos.
+        </p>
+
+        <p>
+          Nuestra misión es ofrecer herramientas y contenido que inspiren a las
+          personas a aprender, crear y compartir. Cada proyecto que realizamos
+          busca unir funcionalidad y estética, cuidando cada detalle para que el
+          resultado sea útil y agradable.
+        </p>
+
+        <p>
+          Valoramos la innovación, la curiosidad y la mejora constante. Nos
+          esforzamos por mantenernos actualizados con las nuevas tendencias en
+          tecnología y diseño, aplicándolas de manera práctica y sencilla para
+          que cualquier persona pueda beneficiarse de ellas.
+        </p>
+      </section>
+    </main>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="formLogin">
+          <input type="text" id="login" placeholder="Usuario" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+  
+    <footer class="footer">
+      <p>
+        Desarrollado por <strong>Joel Narvaez Martínez</strong> 
+        <span id="fechaActual"></span>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+
+    <script>
+      const fecha = new Date();
+      const opciones = { year: "numeric", month: "long", day: "numeric" };
+      document.getElementById("fechaActual").textContent =
+        fecha.toLocaleDateString("es-MX", opciones);
+    </script>
+  </body>
+</html>

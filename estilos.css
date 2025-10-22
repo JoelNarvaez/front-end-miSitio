@@ -1,0 +1,384 @@
+.user-name {
+	color: #fff;
+	font-weight: 500;
+	margin-right: 0.7rem;
+	font-size: 1rem;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	background: #f7f7f7;
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #222;
+	color: #fff;
+	padding: 0.5rem 1.5rem;
+}
+.nav-left {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.nav-logo {
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+.nav-link {
+	color: #fff;
+	text-decoration: none;
+	padding: 0.3rem 0.7rem;
+	border-radius: 3px;
+	transition: background 0.2s;
+}
+.nav-link:hover {
+	background: #444;
+}
+.nav-right {
+	display: flex;
+	align-items: center;
+}
+.icon-btn {
+	background: none;
+	border: none;
+	cursor: pointer;
+	font-size: 1.5rem;
+	color: #fff;
+	padding: 0.2rem 0.5rem;
+	border-radius: 50%;
+	transition: background 0.2s;
+}
+.icon-btn:hover {
+	background: #444;
+}
+
+main {
+	max-width: 700px;
+	margin: 2rem auto;
+	background: #fff;
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+/* Modal */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	background: rgba(0,0,0,0.3);
+}
+.modal-content {
+	background: #fff;
+	margin: 7% auto;
+	padding: 2rem 2rem 1.5rem 2rem;
+	border-radius: 8px;
+	width: 100%;
+	max-width: 350px;
+	position: relative;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.close {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 1.5rem;
+	color: #888;
+	cursor: pointer;
+	transition: color 0.2s;
+}
+.close:hover {
+	color: #222;
+}
+
+/* Formulario de login en el modal */
+#formLogin {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+#formLogin input[type="text"],
+#formLogin input[type="password"] {
+	padding: 0.5rem;
+	border: 1px solid #bbb;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+#formLogin button {
+	background: #222;
+	color: #fff;
+	border: none;
+	padding: 0.6rem;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: background 0.2s;
+}
+#formLogin button:hover {
+	background: #444;
+}
+
+  /* Estilos generales */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  main {
+    flex: 1;
+    padding: 50px 20px;
+  }
+
+  /* Sección Home */
+  #home {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  #home:hover {
+    transform: translateY(-5px);
+  }
+
+  #home h1 {
+    font-size: 2.8rem;
+    color: #212529;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  #home p {
+    font-size: 1.2rem;
+    color: #495057;
+    line-height: 1.8;
+  }
+
+  /* Modal de Login */
+  .modal {
+    display: none; /* oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+  }
+
+  .modal-content h2 {
+    margin-bottom: 20px;
+    color: #212529;
+  }
+
+  .modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+
+  .modal-content button {
+    background-color: #ffc107;
+    border: none;
+    color: #212529;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+
+  .modal-content button:hover {
+    background-color: #e0a800;
+  }
+
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #495057;
+  }
+
+ /* Estilos generales del cuerpo */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.7;
+      }
+
+      main {
+        flex: 1;
+        padding: 40px 20px;
+      }
+
+      /* Sección Home */
+      #home {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 12px;
+      }
+
+     
+      #home h1 {
+        font-size: 2.5rem;
+        color: #212529;
+        margin-bottom: 20px;
+        text-align: center;
+        border-bottom: 2px solid #28a745;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      #home p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #495057;
+      }
+
+      #home p strong {
+        color: #212529;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #212529;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+        margin-top: auto;
+      }
+
+      footer a {
+        color: #28a745;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+	   /* Estilos generales del cuerpo */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.7;
+  }
+
+  main {
+    flex: 1;
+    padding: 40px 20px;
+  }
+
+  /* Sección About Us */
+  #about {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+
+  #about:hover {
+    transform: translateY(-5px);
+  }
+
+  #about h1 {
+    font-size: 2.5rem;
+    color: #212529;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  #about p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #495057;
+  }
+
+  #about p strong {
+    color: #212529;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #212529;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: auto;
+  }
+
+  footer a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
