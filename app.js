@@ -52,9 +52,11 @@ form.addEventListener("submit", async (e) => {
           title: 'Acceso permitido',
           text: `Bienvenido ${cuenta}!`,
           confirmButtonText: 'Continuar',
-          timer: 2500,
           showConfirmButton: false
         });
+
+        localStorage.setItem('usuario', JSON.stringify(data.usuario.cuenta));
+        localStorage.setItem('contrasena', JSON.stringify(contrasena));
 
         const userNameSpan = document.getElementById('userName');
         if (userNameSpan) userNameSpan.textContent = cuenta;
